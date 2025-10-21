@@ -2,19 +2,18 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 
 export type TaskProps = {
-    id?: number,
+    id?: string,
     taskTitle: string,
     taskDescription: string
 }
 
 type ListTask = {
     list: TaskProps[]
-    isCompleted: boolean
+        nameUser: string
 }
 const initialState: ListTask = {
     list: [],
-    isCompleted: false
-
+    nameUser: ''
 }
 
 const taskSlice = createSlice({
@@ -25,11 +24,14 @@ const taskSlice = createSlice({
             state.list.push(action.payload)
             
         },
-        completed: (state) =>{
-            state.isCompleted = true
+        addNameUser: (state, action: PayloadAction<string>) => {
+            state.nameUser = action.payload
+        },
+        deleteTask: (state, action:PayloadAction<string>) => {
+            state.list = state.list.filter(task => task.id !== action.payload)
         }
     }
 })
 
-export const { add, completed } = taskSlice.actions
+export const { add, addNameUser, deleteTask } = taskSlice.actions
 export default taskSlice.reducer

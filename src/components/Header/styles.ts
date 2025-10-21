@@ -3,41 +3,44 @@ import { colors } from "../../styles";
 
 
 export const Head = styled.header`
-    
-    div{
+    padding-top: 32px;
+
+    > div{
         display: flex;
         flex-direction: column;
         align-items: center;
+        background-color: ${colors.gray};
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    p {
+        text-align: center;
     }
 
 `
 export const Title = styled.h1`
     font-size: 2em;
-    color: ${colors.textColor};
+    color: #fff;
     text-align: center;
-    padding: 32px 0;
+    padding: 16px 0;
 `
 
 export const Input = styled.input`
-    padding: 8px 16px;
-    border-radius:16px;
-    border: 3px solid ${colors.roxoEscuro};
+    margin: 16px 0;
+    padding: 4px;
+    width: 95%;
     text-align: center;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid ${colors.shadow};
+    color: ${colors.shadow};
+    background-color: transparent;
     outline: none;
-    width: 70%;
-    margin-bottom: 8px;
-    font-size: 1.1em;
-    font-style: italic;
-`
-
-export const Button = styled.button`
-    padding: 8px 16px;
-    border-radius:16px;
-    border: 3px solid ${colors.roxoEscuro};
-    text-align: center;
-    outline: none;
-    width: 60%;
-    margin-bottom: 8px;
-    font-size: 1.1em;
-    cursor: pointer;
 `

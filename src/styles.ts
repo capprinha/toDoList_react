@@ -1,16 +1,13 @@
 import {createGlobalStyle} from "styled-components";
 
-
 export const colors = {
-    roxoEscuro: '#270021',
-    roxoClaro: '#7d0d7d',
-    roxoMeio: '#52064f',
-    alternativaEscura: '#3d0338',
-    alternativaClara: '#680a66',
-    textColor: '#fff'
+    background: '#574759',
+    shadow: '#1a1b1c',
+    red: '#ed6464',
+    redLight: '#87586c',
+    text: '#fff',
+    gray: '#ccc'
 }
-
-
 export const Container = createGlobalStyle`
     *{
         box-sizing: border-box;
@@ -27,7 +24,7 @@ export const Container = createGlobalStyle`
     }
 
     .backgroundColor{
-        background-color: ${colors.alternativaClara};
+        background-color: ${colors.background}
     }
 `
 
