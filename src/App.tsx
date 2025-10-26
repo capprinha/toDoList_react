@@ -1,25 +1,37 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
+
 import Header from "./components/Header";
 import ListCard from "./components/ListCard";
 import Modal from "./components/Modal";
-import { store } from "./store";
+
+import { RootReducer } from "./store";
 import { Container } from "./styles";
-import { Provider } from 'react-redux'
 
 function App() {
 
   const [ modalIsOpen, setModalIsOpen ] = useState(true)
+
+  const { nameUser } = useSelector((state: RootReducer) => state.task)
   return (
     <>
-      <Provider store={store}>
-        <Container/>
-        <div className="backgroundColor">
-          <div className="container">
-            {modalIsOpen ? (<Modal onClick={() => setModalIsOpen(false)}/>) : (<Header/>)}
-            <ListCard/>
-          </div>
+      <Container/>
+      <div className="backgroundColor">
+        <div className="container">
+          {modalIsOpen ? (
+            <Modal onClick={() => {
+              if( nameUser === ''){
+                alert('Por favor, insira seu nome')
+              }
+              else {
+                setModalIsOpen(false)
+              }
+            } }/>) 
+            : 
+            (<Header/>)}
+          <ListCard/>
         </div>
-      </Provider>
+      </div>
     </>
   );
 }

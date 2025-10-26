@@ -4,6 +4,11 @@
       "id": "adc0",
       "taskTitle": "Estudar React",
       "taskDescription": "Ver Redux"
+    },
+    {
+      "id": "0ce9",
+      "taskTitle": "Ver React",
+      "taskDescription": ""
     }
   ]
 }
