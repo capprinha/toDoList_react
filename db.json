@@ -1,14 +1,10 @@
 {
   "task": [
     {
-      "id": "adc0",
-      "taskTitle": "Estudar React",
-      "taskDescription": "Ver Redux"
-    },
-    {
-      "id": "0ce9",
-      "taskTitle": "Ver React",
-      "taskDescription": ""
+      "id": "01c1",
+      "taskTitle": "ToDoList",
+      "taskDescription": "fazer ajustes conforme o Sr. Fred tinha solicitado",
+      "tasksAutor": "Augusto "
     }
   ]
 }

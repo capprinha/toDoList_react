@@ -7,8 +7,9 @@ type CardProps = {
     description?: string
     id?: string
     onClick: () => void
+    author: string
 }
-const Card = ({description, title, id, onClick}: CardProps) => {
+const Card = ({description, title, id, onClick, author}: CardProps) => {
 
     const[ isCheck, setIsCheck ] = useState(false)
     return(
@@ -17,7 +18,7 @@ const Card = ({description, title, id, onClick}: CardProps) => {
                 <input type="checkbox" onChange={e => setIsCheck(e.target.checked)} />
             </div>
             <div className="taskContainer">
-                <span>{id}</span>
+                <span>{id} | Autor: {author}</span>
                 <h2 className={isCheck ? 'taskCompleted' : ''}>{title}</h2>
                 <p className={isCheck ? 'taskCompleted' : ''}>
                     {description}

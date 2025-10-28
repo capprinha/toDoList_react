@@ -16,7 +16,8 @@ const Header = () => {
 
     const [ task , setTask ] = useState<TaskProps>({
         taskTitle:'',
-        taskDescription: ''
+        taskDescription: '',
+        tasksAutor: nameUser
     })
     const [ inputFilled, setInputFilled ] = useState('')
 
@@ -34,7 +35,8 @@ const Header = () => {
                 dispatch(add(data))
                 setTask({
                     taskTitle: '',
-                    taskDescription: ''
+                    taskDescription: '',
+                    tasksAutor: ''
                 })
                 setInputFilled('')
             } else {
